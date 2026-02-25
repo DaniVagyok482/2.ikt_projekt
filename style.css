@@ -1758,3 +1758,16 @@ footer {
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-dark));
     box-shadow: 0 8px 25px var(--accent-glow);
 }
+
+.inpt{
+    padding: 0.8rem;
+    width: 20rem;
+    background-color: #4f83f7;
+    background: linear-gradient(135deg, #171725 0%, #151520 25%, #1a1a2e 50%, #16213e 75%, #0f3460 100%);
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.asd{
+    margin-top: 1rem;
+}

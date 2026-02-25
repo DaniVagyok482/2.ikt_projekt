@@ -17,8 +17,8 @@
                 <div class="logo-text">Notium</div>
             </a>
             <ul class="nav-links">
-                <li><a href="">Bejelentkezés</a></li>
-                <li><a href="" class="reg">Regisztráció</a></li>
+                <li><a href="./bejelentkezes.html">Bejelentkezés</a></li>
+                <li><a href="./regisztracio.html" class="reg">Regisztráció</a></li>
             </ul>
             <div class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
@@ -57,19 +57,19 @@
         <div class="hero-content">
             <h1>Regisztráció</h1>
             <label for="email1">Email cím:</label>
-            <input type="text" name="emai1" />
-            <label for="email2">Email cím újra:</label>
-            <input type="text" name="email2" />
-            <label for="passwrd">Jelszó:</label>
-            <input type="text" name="passwrd" />
+            <input type="text" name="emai1" class="inpt" id="email" placeholder="valami@gmail.com"/>
+            <label for="passwrd1">Jelszó:</label>
+            <input type="password" name="passwrd1" id="passwd1" class="inpt" />
+            <label for="passwrd2">Jelszó újra:</label>
+            <input type="password" name="passwrd2" id="passwd2" class="inpt"/>
             <div class="cta-buttons">
-                <a href="#portfolio" class="cta-primary">Regisztráció</a>
+                <a href="#portfolio" class="cta-primary" onclick="reg()">Regisztráció</a>
             </div>
-            <a href="#contact" class="cta-secondary">Bejelentkezés</a>
+            <a href="#contact" class="cta-secondary asd animacio">Bejelentkezés</a>
         </div>
     </section>
 
-    <script src="./index.js"></script>
+    <script src="./register.js"></script>
 </body>
 
 </html>

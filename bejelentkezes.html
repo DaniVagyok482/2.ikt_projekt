@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notium</title>
+    <link rel="icon" href="./images/logo.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo">
+                <div class="logo-icon"><img src="./images/logo.png" class="logo-icon" alt="Logó"></div>
+                <div class="logo-text">Notium</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="./bejelentkezes.html" class="cta-primary">Bejelentkezés</a></li>
+                <li><a href="./regisztracio.html" class="cta-secondary">Regisztráció</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="">Bejelentkezés</a></li>
+                <li><a href="" class="reg">Regisztráció</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg-animation">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="geo-shape geo-1"></div>
+            <div class="geo-shape geo-2"></div>
+            <div class="particles">
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Bejelentkezés</h1>
+            <label for="email1">Email cím:</label>
+            <input type="text" name="emai1" class="inpt" id="email" placeholder="valami@gmail.com" />
+            <label for="passwrd1">jelszó:</label>
+            <input type="password" name="passwrd1" id="passwd1" class="inpt" />
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-primary">Bejelentkezés</a>
+            </div>
+            <a href="#portfolio" class="cta-secondary asd" onclick="login()">Regisztráció</a>
+        </div>
+    </section>
+
+    <script src="./register.js"></script>
+</body>
+
+</html>
