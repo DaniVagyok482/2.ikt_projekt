@@ -1771,3 +1771,29 @@ footer {
 .asd{
     margin-top: 1rem;
 }
+
+/*szem kinézete*/
+ .inpt-wrap{
+  position: relative;
+  width: 20rem;       
+  display: inline-block;
+}
+
+.inpt{
+  padding-right: 3rem; 
+}
+
+.toggle-password{
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+  font-size: 0.95rem;
+  user-select: none;
+}
+
+.toggle-password:hover{
+  color: white;
+}

@@ -7,6 +7,7 @@
     <title>Notium</title>
     <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -59,9 +60,16 @@
             <label for="email1">Email cím:</label>
             <input type="text" name="emai1" class="inpt" id="email" placeholder="valami@gmail.com"/>
             <label for="passwrd1">Jelszó:</label>
-            <input type="password" name="passwrd1" id="passwd1" class="inpt" />
+            <div class="inpt-wrap">
+                <input type="password" name="passwrd1" id="passwd1" class="inpt" />
+                <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('passwd1', this)"></i>
+            </div>
+            
             <label for="passwrd2">Jelszó újra:</label>
-            <input type="password" name="passwrd2" id="passwd2" class="inpt"/>
+            <div class="inpt-wrap">
+                <input type="password" name="passwrd2" id="passwd2" class="inpt"/>
+                <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('passwd2', this)"></i>
+            </div>
             <div class="cta-buttons">
                 <a href="#portfolio" class="cta-primary" onclick="reg()">Regisztráció</a>
             </div>
