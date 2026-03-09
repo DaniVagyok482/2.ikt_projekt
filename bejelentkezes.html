@@ -58,10 +58,13 @@
             <h1>Bejelentkezés</h1>
             <label for="email1">Email cím:</label>
             <input type="text" name="emai1" class="inpt" id="email" placeholder="valami@gmail.com" />
-            <label for="passwrd1">jelszó:</label>
-            <input type="password" name="passwrd1" id="passwd1" class="inpt" />
+            <label for="passwd1">jelszó:</label>
+            <div class="inpt-wrap">
+                <input type="password" name="passwd1" id="passwd1" class="inpt" />
+                <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('passwd1', this)"></i>
+            </div>
             <div class="cta-buttons">
-                <a href="#contact" class="cta-primary">Bejelentkezés</a>
+                <a href="#contact" class="cta-primary" onclick="bejelentkezés()">Bejelentkezés</a>
             </div>
             <a href="#portfolio" class="cta-secondary asd" onclick="login()">Regisztráció</a>
         </div>
