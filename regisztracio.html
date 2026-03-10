@@ -59,8 +59,8 @@
             <h1>Regisztráció</h1>
             <label for="email1">Felhasználónév:</label>
             <input type="text" name="username" class="inpt" id="username" placeholder="Sajt32"/>
-            <label for="email1">Email cím:</label>
-            <input type="text" name="emai1" class="inpt" id="email" placeholder="valami@gmail.com"/>
+            <label for="email">Email cím:</label>
+            <input type="text" name="emai" class="inpt" id="email" placeholder="valami@gmail.com"/>
             <label for="passwrd1">Jelszó:</label>
             <div class="inpt-wrap">
                 <input type="password" name="passwrd1" id="passwd1" class="inpt" />
@@ -73,13 +73,13 @@
                 <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('passwd2', this)"></i>
             </div>
             <div class="cta-buttons">
-                <a href="#portfolio" class="cta-primary" onclick="reg()">Regisztráció</a>
+                <button class="cta-primary" id="register">Regisztráció</button>
             </div>
-            <a href="#contact" class="cta-secondary asd animacio">Bejelentkezés</a>
+            <a class="cta-secondary asd animacio">Bejelentkezés</a>
         </div>
     </section>
 
-    <script src="./register.js"></script>
+    <script type="module" src="./adatkezeles.js"></script>
 </body>
 
 </html>
