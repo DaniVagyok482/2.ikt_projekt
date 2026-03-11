@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notium</title>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
     <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -58,28 +61,29 @@
         <div class="hero-content">
             <h1>Regisztráció</h1>
             <label for="email1">Felhasználónév:</label>
-            <input type="text" name="username" class="inpt" id="username" placeholder="Sajt32"/>
+            <input type="text" name="username" class="inpt" id="registerUsername" placeholder="Sajt32" />
             <label for="email">Email cím:</label>
-            <input type="text" name="emai" class="inpt" id="email" placeholder="valami@gmail.com"/>
+            <input type="text" name="emai" class="inpt" id="registerEmail" placeholder="valami@gmail.com" />
             <label for="passwrd1">Jelszó:</label>
             <div class="inpt-wrap">
-                <input type="password" name="passwrd1" id="passwd1" class="inpt" />
+                <input type="password" name="passwrd1" id="registerPassword" class="inpt" />
                 <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('passwd1', this)"></i>
             </div>
-            
+
             <label for="passwrd2">Jelszó újra:</label>
             <div class="inpt-wrap">
-                <input type="password" name="passwrd2" id="passwd2" class="inpt"/>
+                <input type="password" name="passwrd2" id="passwd2" class="inpt" />
                 <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('passwd2', this)"></i>
             </div>
             <div class="cta-buttons">
-                <button class="cta-primary" id="register">Regisztráció</button>
+                <button class="cta-primary" id="registerButton">Regisztráció</button>
+                <p class="error" id="registerError"></p>
             </div>
             <a class="cta-secondary asd animacio">Bejelentkezés</a>
         </div>
     </section>
 
-    <script type="module" src="./adatkezeles.js"></script>
+    <script id="status" src="./adatkezeles.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notium</title>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
     <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -57,20 +60,33 @@
         <div class="hero-content">
             <h1>Bejelentkezés</h1>
             <label for="email1">Email cím:</label>
-            <input type="text" name="emai1" class="inpt" id="email" placeholder="valami@gmail.com" />
+            <input type="text" name="emai1" class="inpt" id="loginEmail" placeholder="valami@gmail.com" />
             <label for="passwd1">jelszó:</label>
             <div class="inpt-wrap">
-                <input type="password" name="passwd1" id="passwd1" class="inpt" />
+                <input type="password" name="passwd1" id="loginPassword" class="inpt" />
                 <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('passwd1', this)"></i>
             </div>
             <div class="cta-buttons">
-                <a href="#contact" class="cta-primary" onclick="bejelentkezés()">Bejelentkezés</a>
+                <button id="loginButton" class="cta-primary">Bejelentkezés</button>
             </div>
-            <a href="#portfolio" class="cta-secondary asd" onclick="login()">Regisztráció</a>
+            <p class="error" id="loginError"></p>
+            <a class="cta-secondary asd">Regisztráció</a>
+            <div id="userInfo" style="display: none;">
+                <p>Logged in as: <span id="displayEmail"></span> (<span id="displayUsername"></span>)</p>
+                <button id="signOutButton">Sign Out</button>
+                <button id="deleteAccountButton">Delete My Account</button>
+                <p class="error" id="deleteError"></p>
+                <div id="reauthenticateSection" style="display: none;">
+                    <p>Please re-enter your password to confirm account deletion:</p>
+                    <input type="password" id="reauthPassword" placeholder="Your Password">
+                    <button id="confirmReauthButton">Confirm Deletion</button>
+                </div>
+            </div>
         </div>
+        <p id="status"></p>
     </section>
 
-    <script src="./register.js"></script>
+    <script src="adatkezeles.js"></script>
 </body>
 
 </html>
