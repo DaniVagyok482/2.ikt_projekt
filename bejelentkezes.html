@@ -10,6 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
     <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -64,7 +65,7 @@
             <label for="passwd1">jelszó:</label>
             <div class="inpt-wrap">
                 <input type="password" name="passwd1" id="loginPassword" class="inpt" />
-                <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('passwd1', this)"></i>
+                <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('loginPassword', this)"></i>
             </div>
             <div class="cta-buttons">
                 <button id="loginButton" class="cta-primary">Bejelentkezés</button>
@@ -78,7 +79,13 @@
                 <p class="error" id="deleteError"></p>
                 <div id="reauthenticateSection" style="display: none;">
                     <p>Please re-enter your password to confirm account deletion:</p>
-                    <input type="password" id="reauthPassword" placeholder="Your Password">
+
+                    
+                    <div class="inpt-wrap">
+                        <input type="password" id="reauthPassword" placeholder="Your Password">
+                        <i class="fa-solid fa-eye toggle-password" onclick="togglePassword('reauthPassword', this)"></i>
+                    </div>
+
                     <button id="confirmReauthButton">Confirm Deletion</button>
                 </div>
             </div>
